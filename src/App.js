@@ -31,8 +31,6 @@ class App extends Component {
               ...snapshot.data()
             }
           })
-
-          console.log(this.state)
         })
       } else {
         this.setState({ currentUser: userAuth })
@@ -41,6 +39,7 @@ class App extends Component {
   }
 
   componentWillUnmount() {
+    // noinspection JSValidateTypes
     this.unsubscribeFromAuth()
   }
 
