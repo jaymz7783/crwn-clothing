@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { auth, createUserProfileDocument } from './firebase/firebase.util'
+import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import { connect } from 'react-redux'
 
 import HomePage from './pages/homepage/homepage.component'
@@ -10,7 +10,7 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage from './pages/checkout/checkout.component'
 
 import { setCurrentUser } from './redux/user/user.actions'
-import { selectCurrentUser } from './redux/user/user.selector'
+import { selectCurrentUser } from './redux/user/user.selectors'
 import { createStructuredSelector } from 'reselect'
 
 import './App.css'

@@ -1,3 +1,4 @@
+import React from 'react'
 import { connect } from 'react-redux'
 
 import {
@@ -8,8 +9,9 @@ import {
 
 import './checkout-item.styles.scss'
 
+// eslint-disable-next-line @typescript-eslint/no-shadow
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
-  const { imageUrl, name, quantity, price } = cartItem
+  const { name, imageUrl, price, quantity } = cartItem
   return (
     <div className="checkout-item">
       <div className="image-container">
@@ -25,7 +27,7 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
           &#10095;
         </div>
       </span>
-      <span className="price">${price}</span>
+      <span className="price">{price}</span>
       <div className="remove-button" onClick={() => clearItem(cartItem)}>
         &#10005;
       </div>

@@ -1,4 +1,4 @@
-import './custom-button.styles.scss'
+import './custom-buttom.styles.scss'
 
 const CustomButton = ({
   children,
